@@ -10,7 +10,7 @@ import lombok.NonNull;
 @Builder
 public class Piece {
 
-	private final int id;
+	private final long id;
 	private @NonNull PieceName name;
 	private final int weight;
 }

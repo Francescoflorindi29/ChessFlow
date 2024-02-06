@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Player {
 	private String name;
-	private int id;
+	private long id;
 	private PlayerType type;
 }

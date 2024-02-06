@@ -7,6 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Game {
 
+	private long id;
 	private MoveHistoryEntry[][] history;
 	private Player whitePlayer;
 	private Player blackPlayer;

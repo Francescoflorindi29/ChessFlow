@@ -1,15 +1,17 @@
 package it.univaq.lpo.chessflow;
+import it.univaq.lpo.chessflow.gui.ChessApplicationGUI;
+import it.univaq.lpo.chessflow.repository.PieceRepository;
+import it.univaq.lpo.chessflow.repository.PieceRepositoryJsonImpl;
 
-import java.util.Arrays;
-
-import it.univaq.lpo.chessflow.repository.*;
 
 public class ChessFlowApplication {
+	
+	private PieceRepository pieceRepository = new PieceRepositoryJsonImpl();
+	private ChessApplicationGUI gui;
 
-	public static void main(String[] args) {
-		PieceRepository pieceRepository = new PieceRepositoryJsonImpl();
-		System.out.println(Arrays.toString(pieceRepository.getChessPieces()));
-		
+	public static void main(String[] args) {		
+		ChessFlowApplication application = new ChessFlowApplication();
+		application.gui.display(args);
 	}
 	
 }

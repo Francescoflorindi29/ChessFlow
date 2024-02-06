@@ -7,6 +7,7 @@ import lombok.Data;
 @AllArgsConstructor
 public class Board {
 
+	private long id;
 	private Square[][] squares;
 	
 }

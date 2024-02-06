@@ -1,10 +1,32 @@
 [
-	{
-		"id":1,
-		"name":"PAWN",
-		"weight":1
-	},
-	{
-	
-	}
+    {
+        "id": 1,
+        "name": "PAWN",
+        "weight": 1
+    },
+    {
+        "id": 2,
+        "name": "ROOK",
+        "weight": 5
+    },
+    {
+        "id": 3,
+        "name": "KNIGHT",
+        "weight": 3
+    },
+    {
+        "id": 4,
+        "name": "BISHOP",
+        "weight": 3
+    },
+    {
+        "id": 5,
+        "name": "QUEEN",
+        "weight": 9
+    },
+    {
+        "id": 6,
+        "name": "KING",
+        "weight": 0
+    }
 ]
