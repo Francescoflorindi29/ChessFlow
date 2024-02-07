@@ -1,11 +1,15 @@
 package it.univaq.lpo.chessflow.gui;
 
+import it.univaq.lpo.chessflow.errors.BusinessException;
+import it.univaq.lpo.chessflow.gui.data.PieceMovedInfo;
+
 import java.util.function.Consumer;
 
-public interface ChessApplicationGUI {
+public interface ChessApplicationGui {
 	
-	public ChessBoardGUI getBoard();
-	public void display(String[] args);
-	public void onPieceMoved(Consumer<PieceMoveGUI> executedMove);
+	ChessBoardGui getBoard();
+	void run(String[] args) throws BusinessException;
+	void addOnPieceMoved(Consumer<PieceMovedInfo> onPieceMovedCallback);
+	void removeOnPieceMoved(Consumer<PieceMovedInfo> onPieceMovedCallback);
 
 }
