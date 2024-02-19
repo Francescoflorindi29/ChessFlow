@@ -1,22 +1,33 @@
 package it.univaq.lpo.chessflow.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public abstract class Square {
 
-@Data
-@AllArgsConstructor
-public class Square {
-	
-	private long id;
-	private long boardId;
-	
-	private int row;
-	private int column;
-	private Color color;
-	
-	private Long pieceId;
-	
-	public boolean isPieceOver() {
-		return this.pieceId != null;
+	int squareCoordinate;
+
+	Square(int squareCoordinate) {
+		this.squareCoordinate = squareCoordinate;
 	}
+
+	public abstract boolean isSquareOccupied();
+
+	public abstract Piece getPiece();
+
+	public static final class EmptySquare extends Square {
+		
+		EmptySquare(int coordinate) {
+			super (coordinate);
+		}
+		
+		@Override
+		public boolean isSquareOccupied() {
+			return false;
+		}
+		
+		@Override
+		public Piece getPiece() {
+			return null;
+		}
+	}
+	
+
 }
