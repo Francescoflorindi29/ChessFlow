@@ -3,6 +3,8 @@ package it.univaq.lpo.chessflow.model;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.google.common.collect.ImmutableMap;
+
 public abstract class Square {
 
 	protected final int squareCoordinate;
@@ -23,7 +25,7 @@ public abstract class Square {
 		for (int i = 0; i < 64; i++) {
 			emptySquareMap.put(i, new EmptySquare(i));
 		}
-		return emptySquareMap;
+		return ImmutableMap.copyOf(emptySquareMap);
 	}
 
 	public abstract boolean isSquareOccupied();
