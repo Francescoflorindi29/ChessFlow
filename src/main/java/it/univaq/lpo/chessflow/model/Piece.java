@@ -1,6 +1,6 @@
 package it.univaq.lpo.chessflow.model;
 
-import java.util.List;
+import java.util.Collection;
 
 public abstract class Piece {
 
@@ -16,6 +16,6 @@ public abstract class Piece {
 		return this.pieceAlliance;
 	}
 
-	public abstract List<Move> calculateLegalMoves(final Board board);
+	public abstract Collection<Move> calculateLegalMoves(final Board board);
 
 }

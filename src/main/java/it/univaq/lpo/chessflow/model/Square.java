@@ -2,7 +2,6 @@ package it.univaq.lpo.chessflow.model;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import com.google.common.collect.ImmutableMap;
 
 public abstract class Square {
@@ -11,7 +10,7 @@ public abstract class Square {
 
 	private static final Map<Integer, EmptySquare> EMPTY_SQUARE_CACHE = createAllPosibleEmptySquare();
 
-	private Square(int squareCoordinate) {
+	private Square(final int squareCoordinate) {
 		this.squareCoordinate = squareCoordinate;
 	}
 
@@ -22,7 +21,7 @@ public abstract class Square {
 	private static Map<Integer, EmptySquare> createAllPosibleEmptySquare() {
 		final Map<Integer, EmptySquare> emptySquareMap = new HashMap<>();
 
-		for (int i = 0; i < 64; i++) {
+		for (int i = 0; i < BoardUtils.NUM_TILES; i++) {
 			emptySquareMap.put(i, new EmptySquare(i));
 		}
 		return ImmutableMap.copyOf(emptySquareMap);
@@ -53,7 +52,7 @@ public abstract class Square {
 
 		private final Piece pieceOnSaqure;
 
-		OccupiedSquare(int squareCoordinate, Piece pieceOnSquare) {
+		private OccupiedSquare(int squareCoordinate,final Piece pieceOnSquare) {
 			super(squareCoordinate);
 			this.pieceOnSaqure = pieceOnSquare;
 		}
